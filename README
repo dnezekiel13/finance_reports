@@ -1,0 +1,68 @@
+# 🧾 Financial Report Parser (LLM-powered)
+
+This project provides a generic wrapper around multiple Large Language Model (LLM) providers (OpenAI, OpenRouter, Mistral, Anthropic, Groq), allowing seamless parsing of company financial reports to extract key KPIs and insights.
+
+## 🔍 What It Does
+
+- Parses financial reports using an LLM
+- Extracts key financial KPIs:
+  - Revenue, Net Income, Operating Margin, etc.
+  - Profitability ratios like ROE, ROA, Net Profit Margin
+  - Free Cash Flow, EPS, Debt levels
+- Flags growth signals, risks, and anomalies
+- Supports plug-and-play access to different LLM providers via `.env`
+
+## ⚙️ Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/dnezekiel13/finance_reports.git
+   cd finance_reports
+
+
+2.Install Dependencies
+
+pip install -r requirements.txt
+
+PROVIDER=openrouter
+MODEL=mistralai/mixtral-8x7b-instruct
+OPENAI_API_KEY=sk-...
+OPENROUTER_API_KEY=...
+ANTHROPIC_API_KEY=...
+MISTRAL_API_KEY=...
+GROQ_API_KEY=...
+
+3. Create a .env file with following variables (examples)
+
+PROVIDER=openrouter
+MODEL=mistralai/mixtral-8x7b-instruct
+OPENAI_API_KEY=sk-...
+OPENROUTER_API_KEY=...
+ANTHROPIC_API_KEY=...
+MISTRAL_API_KEY=...
+GROQ_API_KEY=...
+
+
+Usage
+
+Update the test.ipynb notebook with your company’s financial report content (delimited with triple backticks), then run it.
+
+🔄 Roadmap
+
+ Add support for batch processing of reports
+ Refactor prompt as a templated class
+ Add Streamlit UI for non-technical users
+ Integrate PDF parsing for end-to-end automation
+🧠 Built With
+
+Python 3.10+
+OpenAI / OpenRouter / Anthropic / Mistral / Groq SDKs
+dotenv
+Jupyter Notebook
+📫 Connect
+
+Daniel Ezekiel
+🔗 LinkedIn
+
+
+
